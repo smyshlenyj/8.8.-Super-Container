@@ -12,29 +12,29 @@ int main()
 	test[2] = 777;
 	test[3] = 7777;
 	std::cout << "-------push back-------------\n";
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "----------pop back----------\n";
 	test.PopBack();
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "--------push front------------\n";
 	// error impossible (is not a public offer) using int
 	test.PushFront(888);
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "-----------pop front---------\n";
 	test.PopFront();
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "-------insert by index-------------\n";
 	test.InsertElementByIndex(3, 999);
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "-------deletebyindex-------------\n";
 	test.DeleteElementByIndex(3);
-	test.PrintContainer();
+	//test.PrintContainer();
 	std::cout << "-----test copy to test2:---------------\n";
 	Container<int> test2(3);
 	std::cout << "test address \t" << &test << std::endl;
 	std::cout << "test2 address \t" << &test2 << std::endl;
 	test.CopyContainerTo(test2);
-	test2.PrintContainer();
+	//test2.PrintContainer();
 
 	Container<int> newtest(7);
 
@@ -49,10 +49,10 @@ int main()
 	try
 	{
 		std::cout << "------------------" << std::endl;
-		newtest.PrintContainer();
+		//newtest.PrintContainer();
 		std::cout << "------------------" << std::endl;
 		newtest.InsertElementByIndex(7, 98765);
-		newtest.PrintContainer();
+		//newtest.PrintContainer();
 		std::cout << newtest.GetIndexByValue(123456) << std::endl;
 		std::cout << "------------------" << std::endl;
 	}
@@ -188,8 +188,15 @@ int main()
 	testTemplate[0] = 'a';
 	testTemplate[1] = 'b';
 	testTemplate[2] = 'c';
-	testTemplate.PrintContainer();
-
+	std::cout << testTemplate.GetElementByIndex(2) << std::endl;
+	Container<char> testTemplate2(3);
+	testTemplate2[0] = 'c';
+	testTemplate2[1] = 'b';
+	testTemplate2[2] = 'a';
+	testTemplate2 = testTemplate;
+	std::cout << testTemplate2.GetElementByIndex(0) << std::endl;
+	std::cout << testTemplate2.GetElementByIndex(1) << std::endl;
+	std::cout << testTemplate2.GetElementByIndex(2) << std::endl;
 	//ttt aaa(5,7);
 
 	//Container<ttt> zzz (2);

@@ -132,6 +132,9 @@
   <ItemGroup>
     <ClInclude Include="Container.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Container.inl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
